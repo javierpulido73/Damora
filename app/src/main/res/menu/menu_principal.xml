@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itm_realizar_pedido"
+        android:icon="@drawable/ic_upload"
+        android:title="Realizar pedido"/>
+    <item
+        android:id="@+id/itm_consultar_pedido"
+        android:icon="@drawable/ic_upload"
+        android:title="Consultar pedido"/>
+    <item
+        android:id="@+id/itm_rastrear_pedido"
+        android:icon="@drawable/ic_upload"
+        android:title="Rastrear pedido"/>
+    <item
+        android:id="@+id/itm_reportes"
+        android:icon="@drawable/ic_upload"
+        android:title="Reportes"/>
+    <item
+        android:id="@+id/itm_pagos"
+        android:icon="@drawable/ic_upload"
+        android:title="Pagos"/>
+    <item
+        android:id="@+id/itm_contacto"
+        android:icon="@drawable/ic_upload"
+        android:title="Contacto"/>
+    <item
+        android:id="@+id/itm_cerrar_sesion"
+        android:icon="@drawable/ic_upload"
+        android:title="Cerrar sesión"/>
+
+</menu>

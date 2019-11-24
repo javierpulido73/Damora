@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="string_array_turno">
+        <item>Matutino</item>
+        <item>Vespertino</item>
+        <item>Nocturno</item>
+        <item>Turno</item>
+    </string-array>
+    <string-array
+        name="string_array_combustible">
+        <item>Magna</item>
+        <item>Premium</item>
+        <item>Diesel</item>
+        <item>Tipo combustible</item>
+    </string-array>
+    <string-array
+        name="string_array_cantidad">
+        <item>15K litros</item>
+        <item>20K litros</item>
+        <item>30K litros</item>
+        <item>Cantidad</item>
+    </string-array>
+</resources>
