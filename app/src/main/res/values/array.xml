@@ -21,4 +21,11 @@
         <item>30K litros</item>
         <item>Cantidad</item>
     </string-array>
+    <string-array
+        name="string_array_forma_pago">
+        <item>HSBC **** 4657</item>
+        <item>Banamex **** 0192</item>
+        <item>Bancomer **** 7364</item>
+        <item>Método de pago</item>
+    </string-array>
 </resources>

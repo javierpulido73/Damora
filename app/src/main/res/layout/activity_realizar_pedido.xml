@@ -75,67 +75,28 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
-                    <LinearLayout
+                    <Spinner
+                        android:id="@+id/spinner_turno"
+                        android:layout_width="match_parent"
+                        android:hint="Servidor"
+                        android:textSize="@dimen/text_h5"
+                        android:textColor="@color/gris_4"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spinner_combustible"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_h1"
+                        android:hint="Servidor"
+                        android:layout_height="wrap_content"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_cantidad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_h1"
+                        android:hint="Servidor"
                         android:gravity="center"
-                        android:orientation="vertical">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-                            <Spinner
-                                android:id="@+id/spinner_turno"
-                                android:layout_width="fill_parent"
-                                android:hint="Servidor"
-                                android:textSize="@dimen/text_h5"
-                                android:textColor="@color/gris_4"
-                                android:layout_height="fill_parent"/>
-                        </RelativeLayout>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_h2"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-                            <Spinner
-                                android:id="@+id/spinner_combustible"
-                                android:layout_width="fill_parent"
-                                android:hint="Servidor"
-                                android:layout_height="fill_parent"/>
-                        </RelativeLayout>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_marginTop="@dimen/margin_h2"
-                        android:layout_gravity="center"
-                        android:orientation="vertical">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-
-                            android:layout_height="match_parent">
-                            <Spinner
-                                android:id="@+id/spinner_cantidad"
-                                android:layout_width="fill_parent"
-                                android:layout_height="match_parent"
-                                android:hint="Servidor"
-                                android:gravity="center"
-
-                                />
-
-                        </RelativeLayout>
-                    </LinearLayout>
+                        />
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
@@ -145,7 +106,7 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/boton_iniciar_prueba"
+                            android:id="@+id/boton_agregar_pedido"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"

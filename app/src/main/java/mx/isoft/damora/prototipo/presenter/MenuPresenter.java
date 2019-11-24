@@ -13,9 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import mx.isoft.damora.prototipo.R;
+import mx.isoft.damora.prototipo.view.PrincipalActivity;
+import mx.isoft.damora.prototipo.view.RastrearPedidoActivity;
 import mx.isoft.damora.prototipo.view.RealizarPedidoActivity;
 
 /**
@@ -38,17 +39,22 @@ public class MenuPresenter {
                 menuDesp.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
+                        Class destinoActivity=null;
                         switch (item.getItemId()) {
+                            case R.id.itm_principal:
+                                destinoActivity= PrincipalActivity.class;
+                                break;
                             case R.id.itm_realizar_pedido:
-                                        Intent intent = new Intent(view, RealizarPedidoActivity.class);
-                                        view.startActivity(intent);
-                                        view.finish();
+                                destinoActivity=RealizarPedidoActivity.class;
                                 break;
                             case R.id.itm_consultar_pedido:
                                 break;
                             case R.id.itm_rastrear_pedido:
+                                destinoActivity= RastrearPedidoActivity.class;
                                 break;
                             case R.id.itm_reportes:
+                                break;
+                            case R.id.itm_confirmar_compra:
                                 break;
                             case R.id.itm_pagos:
                                 break;
@@ -57,6 +63,9 @@ public class MenuPresenter {
                             case R.id.itm_cerrar_sesion:
                                 break;
                         }
+                        Intent intent = new Intent(view, destinoActivity);
+                        view.startActivity(intent);
+                        view.finish();
                         return true;
                     }
                 });
