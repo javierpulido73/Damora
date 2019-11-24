@@ -11,6 +11,8 @@ import mx.isoft.damora.prototipo.R;
 
 public class LoginActivity extends AppCompatActivity {
     private Button loginBtn;
+////////
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
