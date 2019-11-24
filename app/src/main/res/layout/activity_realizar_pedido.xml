@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fondo_primario"
+    android:orientation="vertical"
+    android:weightSum="100">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:weightSum="100"
+        android:layout_margin="@dimen/margin_h2"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:text="Realizar pedido"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_h3"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <CalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <Spinner
+                                android:layout_width="fill_parent"
+                                android:hint="Servidor"
+                                android:layout_height="fill_parent"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/margin_h3"
+                                android:layout_centerInParent="true"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_marginLeft="@dimen/margin_h4"
+                                    android:textColor="@color/gris_4"
+                                    android:gravity="left"
+                                    android:textSize="@dimen/text_h5"
+                                    android:text="Turno"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <Spinner
+                                android:layout_width="fill_parent"
+                                android:hint="Servidor"
+                                android:layout_height="fill_parent"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/margin_h3"
+                                android:layout_centerInParent="true"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_marginLeft="@dimen/margin_h4"
+                                    android:textColor="@color/gris_4"
+                                    android:gravity="left"
+                                    android:textSize="@dimen/text_h5"
+                                    android:text="Tipo conbustible"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+
+                            android:layout_height="match_parent">
+                            <Spinner
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Servidor"
+                                android:gravity="center"
+
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/margin_h3"
+                                android:layout_centerInParent="true"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_marginLeft="@dimen/margin_h4"
+                                    android:textColor="@color/gris_4"
+                                    android:gravity="left"
+                                    android:textSize="@dimen/text_h5"
+                                    android:text="Cantidad"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:weightSum="100"
+                        android:layout_marginTop="@dimen/margin_h0"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/boton_iniciar_prueba"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:layout_margin="@dimen/margin_h2"
+                            android:background="@drawable/draw_boton_login"
+                            android:text="Agregar"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/text_h5"
+                            android:textColor="@android:color/white"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
