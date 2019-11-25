@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.isoft.damora.prototipo">
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -11,8 +12,14 @@
         android:roundIcon="@drawable/ico_damora"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.CapturaTirillaActivity"
+        <activity android:name=".view.ConsultarPedidoActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".view.MantenimientoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.CapturaTirillaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.ConfirmarCompraActivity"
             android:theme="@style/AppTheme.NoActionBar" />

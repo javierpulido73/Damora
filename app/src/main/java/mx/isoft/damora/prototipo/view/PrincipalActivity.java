@@ -34,7 +34,7 @@ public class PrincipalActivity extends AppCompatActivity {
                 finish();
             }
         });
-        //Hacemos visible o invisible la notifiación
+        //Hacemos visible o invisible la notificacion
         notificationLl.setVisibility(VariablesSesion.notification?View.VISIBLE:View.INVISIBLE);
     }
 

@@ -21,21 +21,21 @@ public class ComprasPresenter {
     /**
      * TODO: llenado temporal, debería llenarse desde base de datos
      */
-    public void llenarLista(){
-        CompraDto resultadoDto=new CompraDto();
-        resultadoDto.setFecha(new Date());
-        resultadoDto.setTipoCombustible("Magna");
-        resultadoDto.setTurno("Mat");
-        VariablesSesion.resultadoDtoList.add(resultadoDto);
-        resultadoDto=new CompraDto();
-        resultadoDto.setFecha(new Date());
-        resultadoDto.setTipoCombustible("Premium");
-        resultadoDto.setTurno("Vespertino");
-        VariablesSesion.resultadoDtoList.add(resultadoDto);
-        resultadoDto=new CompraDto();
-        resultadoDto.setFecha(new Date());
-        resultadoDto.setTipoCombustible("Premium");
-        resultadoDto.setTurno("Nocturno");
-        VariablesSesion.resultadoDtoList.add(resultadoDto);
-    }
+//    public void llenarLista(){
+//        CompraDto resultadoDto=new CompraDto();
+//        resultadoDto.setFecha(new Date());
+//        resultadoDto.setTipoCombustible("Magna");
+//        resultadoDto.setTurno("Mat");
+//        VariablesSesion.resultadoDtoList.add(resultadoDto);
+//        resultadoDto=new CompraDto();
+//        resultadoDto.setFecha(new Date());
+//        resultadoDto.setTipoCombustible("Premium");
+//        resultadoDto.setTurno("Vespertino");
+//        VariablesSesion.resultadoDtoList.add(resultadoDto);
+//        resultadoDto=new CompraDto();
+//        resultadoDto.setFecha(new Date());
+//        resultadoDto.setTipoCombustible("Premium");
+//        resultadoDto.setTurno("Nocturno");
+//        VariablesSesion.resultadoDtoList.add(resultadoDto);
+//    }
 }

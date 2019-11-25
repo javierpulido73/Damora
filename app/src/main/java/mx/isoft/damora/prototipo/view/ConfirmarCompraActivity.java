@@ -43,9 +43,9 @@ public class ConfirmarCompraActivity extends AppCompatActivity {
         new MenuPresenter(this,(ImageButton) findViewById(R.id.boton_menu));
         compraAdapter=new CompraAdapter(this);
         comprasLv.setAdapter(compraAdapter);
-        presenter=new ComprasPresenter(this);
+//        presenter=new ComprasPresenter(this);
         //TODO: esta lista se llena temporalmente ya que se devería llenar de base de datos
-        presenter.llenarLista();
+//        presenter.llenarLista();
         compraAdapter.notifyDataSetChanged();
         confirmarCompra.setOnClickListener(new View.OnClickListener() {
             @Override

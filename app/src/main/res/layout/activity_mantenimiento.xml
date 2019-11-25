@@ -33,10 +33,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Rastrear pedido"
+                android:text="En mantenimiento"
                 android:textColor="@android:color/black"
                 android:layout_marginRight="@dimen/text_h2"
-                android:textSize="@dimen/text_h3"
+                android:textSize="@dimen/text_h5"
                 android:textStyle="bold"
 
                 />

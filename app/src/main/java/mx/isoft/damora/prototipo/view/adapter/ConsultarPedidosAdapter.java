@@ -24,10 +24,10 @@ import mx.isoft.damora.prototipo.utils.VariablesSesion;
 import mx.isoft.damora.prototipo.view.RealizarPedidoActivity;
 
 
-public class CompraAdapter extends BaseAdapter {
+public class ConsultarPedidosAdapter extends BaseAdapter {
 
     private final Context context;
-    public CompraAdapter(final Context context) {
+    public ConsultarPedidosAdapter(final Context context) {
         this.context=context;
     }
 
@@ -88,5 +88,5 @@ public class CompraAdapter extends BaseAdapter {
         public ImageButton editar;
         public ImageButton eliminar;
     }
-    
+
 }

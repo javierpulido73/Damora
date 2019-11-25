@@ -63,11 +63,13 @@
                 android:layout_margin="@dimen/margin_h2"
                 android:text="Precios"
                 android:gravity="center"
+                android:textStyle="bold"
                 android:textSize="@dimen/text_h3"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@android:color/holo_green_light"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="match_parent"
@@ -88,6 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@android:color/holo_red_light"
                 android:layout_marginTop="@dimen/margin_h3"
                 android:orientation="horizontal">
                 <TextView
@@ -108,12 +111,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:background="@android:color/black"
                 android:layout_marginTop="@dimen/margin_h3"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Diesel: "
+                    android:textColor="@android:color/white"
                     android:gravity="center"
                     android:textSize="@dimen/text_h4"/>
                 <TextView
@@ -121,6 +126,8 @@
                     android:layout_height="wrap_content"
                     android:text="$15.35"
                     android:gravity="center"
+                    android:textColor="@android:color/white"
+
                     android:textStyle="bold"
                     android:textSize="@dimen/text_h4"/>
             </LinearLayout>
@@ -128,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_h2"
+                android:textStyle="bold"
                 android:text="Consumo semanal"
                 android:gravity="center"
                 android:textSize="@dimen/text_h3"/>

@@ -15,6 +15,9 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 
 import mx.isoft.damora.prototipo.R;
+import mx.isoft.damora.prototipo.view.ConfirmarCompraActivity;
+import mx.isoft.damora.prototipo.view.ConsultarPedidoActivity;
+import mx.isoft.damora.prototipo.view.MantenimientoActivity;
 import mx.isoft.damora.prototipo.view.PrincipalActivity;
 import mx.isoft.damora.prototipo.view.RastrearPedidoActivity;
 import mx.isoft.damora.prototipo.view.RealizarPedidoActivity;
@@ -48,19 +51,25 @@ public class MenuPresenter {
                                 destinoActivity=RealizarPedidoActivity.class;
                                 break;
                             case R.id.itm_consultar_pedido:
+                                destinoActivity= ConsultarPedidoActivity.class;
                                 break;
                             case R.id.itm_rastrear_pedido:
                                 destinoActivity= RastrearPedidoActivity.class;
                                 break;
                             case R.id.itm_reportes:
+                                destinoActivity= MantenimientoActivity.class;
                                 break;
                             case R.id.itm_confirmar_compra:
+                                destinoActivity= ConfirmarCompraActivity.class;
                                 break;
                             case R.id.itm_pagos:
+                                destinoActivity= MantenimientoActivity.class;
                                 break;
                             case R.id.itm_contacto:
+                                destinoActivity= MantenimientoActivity.class;
                                 break;
                             case R.id.itm_cerrar_sesion:
+                                destinoActivity= MantenimientoActivity.class;
                                 break;
                         }
                         Intent intent = new Intent(view, destinoActivity);
