@@ -1,6 +1,7 @@
 package mx.isoft.damora.prototipo.view.adapter;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -18,8 +19,12 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+
 import mx.isoft.damora.prototipo.R;
+import mx.isoft.damora.prototipo.model.RegistrosPedidosModel;
 import mx.isoft.damora.prototipo.utils.FuncionesGenerales;
+import mx.isoft.damora.prototipo.utils.SharedPref;
 import mx.isoft.damora.prototipo.utils.VariablesSesion;
 import mx.isoft.damora.prototipo.view.RealizarPedidoActivity;
 
@@ -75,7 +80,25 @@ public class CompraAdapter extends BaseAdapter {
         itemHolder.eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"Se deberá eliminar el registro",Toast.LENGTH_LONG).show();
+                new AlertDialog.Builder(context)
+                        .setTitle("Eliminar pedido")
+                        .setMessage("¿Estás seguro que deseas eliminarlo?")
+                        .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                VariablesSesion.resultadoDtoList.remove(position);
+                                notifyDataSetChanged();
+                            }
+                        })
+                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        })
+
+                        // A null listener allows the button to dismiss the dialog and take no further action.
+                        .setNegativeButton(android.R.string.no, null)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         });
         return rowView;
@@ -88,5 +111,5 @@ public class CompraAdapter extends BaseAdapter {
         public ImageButton editar;
         public ImageButton eliminar;
     }
-    
+
 }

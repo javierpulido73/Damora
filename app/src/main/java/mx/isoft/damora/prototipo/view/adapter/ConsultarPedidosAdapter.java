@@ -1,39 +1,43 @@
 package mx.isoft.damora.prototipo.view.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.text.SpannableStringBuilder;
-import android.text.style.ImageSpan;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
-import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import mx.isoft.damora.prototipo.R;
+import mx.isoft.damora.prototipo.model.CompraDto;
+import mx.isoft.damora.prototipo.model.RegistrosPedidosModel;
 import mx.isoft.damora.prototipo.utils.FuncionesGenerales;
-import mx.isoft.damora.prototipo.utils.VariablesSesion;
-import mx.isoft.damora.prototipo.view.RealizarPedidoActivity;
+import mx.isoft.damora.prototipo.utils.SharedPref;
 
 
 public class ConsultarPedidosAdapter extends BaseAdapter {
 
     private final Context context;
+    private List<CompraDto> listRegistros;
     public ConsultarPedidosAdapter(final Context context) {
         this.context=context;
+        RegistrosPedidosModel registrosPedidosModel= SharedPref.extraerRegistrosPedidos(context);
+        if(registrosPedidosModel!=null){
+            listRegistros=registrosPedidosModel.getCompraDtos();
+        }else {
+            listRegistros=new ArrayList<>();
+        }
     }
 
     @Override
     public int getCount() {
-        return VariablesSesion.resultadoDtoList.size();
+        return listRegistros.size();
     }
 
     @Override
@@ -51,31 +55,46 @@ public class ConsultarPedidosAdapter extends BaseAdapter {
         View rowView = convertView;
         if (rowView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            rowView = inflater.inflate(R.layout.item_compra, parent, false);
+            rowView = inflater.inflate(R.layout.item_pedido, parent, false);
             ItemHolder itemHolder = new ItemHolder();
             itemHolder.fecha = rowView.findViewById(R.id.tv_fecha);
             itemHolder.tipoCombustible = rowView.findViewById(R.id.tv_tipo);
             itemHolder.turno = rowView.findViewById(R.id.tv_turno);
-            itemHolder.editar = rowView.findViewById(R.id.ib_editar);
-            itemHolder.eliminar = rowView.findViewById(R.id.ib_eliminar);
+            itemHolder.cancelar = rowView.findViewById(R.id.ib_cancelar);
             rowView.setTag(itemHolder);
         }
         // fill data
         final ItemHolder itemHolder = (ItemHolder) rowView.getTag();
-        itemHolder.fecha.setText(FuncionesGenerales.formatearFecha(VariablesSesion.resultadoDtoList.get(position).getFecha()));
-        itemHolder.tipoCombustible.setText(VariablesSesion.resultadoDtoList.get(position).getTipoCombustible());
-        itemHolder.turno.setText(VariablesSesion.resultadoDtoList.get(position).getTurno());
-        itemHolder.editar.setOnClickListener(new View.OnClickListener() {
+        itemHolder.fecha.setText(FuncionesGenerales.formatearFecha(listRegistros.get(position).getFecha()));
+        itemHolder.tipoCombustible.setText(listRegistros.get(position).getTipoCombustible());
+        itemHolder.turno.setText(listRegistros.get(position).getTurno());
+
+        itemHolder.cancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context, RealizarPedidoActivity.class);
-                context.startActivity(intent);
-            }
-        });
-        itemHolder.eliminar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context,"Se deberá eliminar el registro",Toast.LENGTH_LONG).show();
+                new AlertDialog.Builder(context)
+                        .setTitle("Cancelar pedido")
+                        .setMessage("¿Estás seguro que deseas cancelarlo?")
+
+                        // Specifying a listener allows you to take an action before dismissing the dialog.
+                        // The dialog is automatically dismissed when a dialog button is clicked.
+                        .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                listRegistros.remove(position);
+                                SharedPref.guardarRegistroPedidos(context,new RegistrosPedidosModel(listRegistros));
+                                notifyDataSetChanged();
+                            }
+                        })
+                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        })
+
+                        // A null listener allows the button to dismiss the dialog and take no further action.
+                        .setNegativeButton(android.R.string.no, null)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         });
         return rowView;
@@ -85,8 +104,7 @@ public class ConsultarPedidosAdapter extends BaseAdapter {
         public TextView fecha;
         public TextView tipoCombustible;
         public TextView turno;
-        public ImageButton editar;
-        public ImageButton eliminar;
+        public ImageButton cancelar;
     }
 
 }

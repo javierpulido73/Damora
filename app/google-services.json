@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "716953841316",
+    "firebase_url": "https://damora-8a59e.firebaseio.com",
+    "project_id": "damora-8a59e",
+    "storage_bucket": "damora-8a59e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716953841316:android:05a90dd1c22cda25490031",
+        "android_client_info": {
+          "package_name": "mx.isoft.damora.prototipo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716953841316-4idigctslvtajko14beind4b83nr9b8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtsts_OAnKvyLsq1izswhlz5qjSv5unQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716953841316-4idigctslvtajko14beind4b83nr9b8d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
