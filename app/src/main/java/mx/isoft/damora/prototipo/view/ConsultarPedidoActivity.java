@@ -2,6 +2,7 @@ package mx.isoft.damora.prototipo.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -25,5 +26,12 @@ public class ConsultarPedidoActivity extends AppCompatActivity {
         consultarPedidosAdapter=new ConsultarPedidosAdapter(this);
         consultarPedidosLv.setAdapter(consultarPedidosAdapter);
 
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent=new Intent(this,PrincipalActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

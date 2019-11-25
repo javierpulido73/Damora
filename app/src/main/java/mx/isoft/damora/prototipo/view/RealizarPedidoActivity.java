@@ -83,5 +83,12 @@ public class RealizarPedidoActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent=new Intent(this,PrincipalActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
 }

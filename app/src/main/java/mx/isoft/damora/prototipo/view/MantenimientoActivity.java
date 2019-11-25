@@ -2,6 +2,7 @@ package mx.isoft.damora.prototipo.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
@@ -16,5 +17,12 @@ public class MantenimientoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mantenimiento);
         //Inicializamos el menú
         new MenuPresenter(this,(ImageButton) findViewById(R.id.boton_menu));
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent=new Intent(this,PrincipalActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
