@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fondo_primario"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <!--    ToolBar personalizada-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_barra_superior"
+        android:layout_gravity="center"
+        android:background="@color/gris_3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/boton_menu"
+                android:layout_width="@dimen/text_h2"
+                android:layout_height="@dimen/text_h2"
+                android:layout_marginLeft="@dimen/margin_h2"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_menu" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Contacto"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="@dimen/text_h2"
+                android:textSize="@dimen/text_h4"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:weightSum="100">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ico_damora" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_h2"
+            android:layout_marginBottom="@dimen/margin_h2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Nombre: "
+                android:textSize="@dimen/text_h6" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_h3"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Juan Manuel Montes Lua"
+                android:textSize="@dimen/text_h6" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_h2"
+            android:layout_marginBottom="@dimen/margin_h2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Teléfono: "
+                android:textSize="@dimen/text_h6" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_h3"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="55 - 3465 - 6574"
+                android:textSize="@dimen/text_h6" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_h5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="55 - 7624 - 0932"
+                android:textSize="@dimen/text_h6" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_h2"
+            android:layout_marginBottom="@dimen/margin_h2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Correo: "
+                android:textSize="@dimen/text_h6" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_h3"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="contacto@damora.com"
+                android:textSize="@dimen/text_h6" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/gris_4"
+            android:layout_marginTop="@dimen/margin_h0">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Grupo Damora"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_h3" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

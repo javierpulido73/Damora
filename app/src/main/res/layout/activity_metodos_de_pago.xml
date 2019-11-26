@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fondo_primario"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <!--    ToolBar personalizada-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_barra_superior"
+        android:layout_gravity="center"
+        android:background="@color/gris_3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/boton_menu"
+                android:layout_width="@dimen/text_h2"
+                android:layout_height="@dimen/text_h2"
+                android:layout_marginLeft="@dimen/margin_h2"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_menu" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Métodos de pago"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="@dimen/text_h2"
+                android:textSize="@dimen/text_h4"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin_h2"
+        android:weightSum="100">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bancomer_trans" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_marginTop="@dimen/margin_h4">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Fernando Zapala "
+                android:textSize="@dimen/text_h6" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="**** 2849"
+                android:textSize="@dimen/text_h6" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_marginTop="@dimen/margin_h5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Josue Salvador"
+                android:textSize="@dimen/text_h6" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="    **** 7493"
+                android:textSize="@dimen/text_h6" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="@dimen/margin_h2"
+            android:layout_marginBottom="@dimen/margin_h2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gris_4" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hsbc_trans" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_marginTop="@dimen/margin_h4">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Emanuel Pérez "
+                android:textSize="@dimen/text_h6" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="   **** 3647"
+                android:textSize="@dimen/text_h6" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_marginTop="@dimen/margin_h5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Rogelio Sánchez"
+                android:textSize="@dimen/text_h6" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text=" **** 7493"
+                android:textSize="@dimen/text_h6" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="@dimen/margin_h2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gris_4" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="60"
+
+            android:weightSum="100"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/boton_agregar_metodo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_margin="@dimen/margin_h2"
+                android:background="@drawable/draw_boton_login"
+                android:text="Agregar tarjeta"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_h5"
+                android:textColor="@android:color/white"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

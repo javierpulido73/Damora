@@ -2,11 +2,13 @@ package mx.isoft.damora.prototipo.view.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -19,6 +21,7 @@ import mx.isoft.damora.prototipo.model.CompraDto;
 import mx.isoft.damora.prototipo.model.RegistrosPedidosModel;
 import mx.isoft.damora.prototipo.utils.FuncionesGenerales;
 import mx.isoft.damora.prototipo.utils.SharedPref;
+import mx.isoft.damora.prototipo.view.DetallePedidoActivity;
 
 
 public class ConsultarPedidosAdapter extends BaseAdapter {
@@ -61,6 +64,7 @@ public class ConsultarPedidosAdapter extends BaseAdapter {
             itemHolder.tipoCombustible = rowView.findViewById(R.id.tv_tipo);
             itemHolder.turno = rowView.findViewById(R.id.tv_turno);
             itemHolder.cancelar = rowView.findViewById(R.id.ib_cancelar);
+            itemHolder.detallePedido=rowView.findViewById(R.id.ll_detalle_pedido);
             rowView.setTag(itemHolder);
         }
         // fill data
@@ -68,16 +72,12 @@ public class ConsultarPedidosAdapter extends BaseAdapter {
         itemHolder.fecha.setText(FuncionesGenerales.formatearFecha(listRegistros.get(position).getFecha()));
         itemHolder.tipoCombustible.setText(listRegistros.get(position).getTipoCombustible());
         itemHolder.turno.setText(listRegistros.get(position).getTurno());
-
         itemHolder.cancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(context)
                         .setTitle("Cancelar pedido")
                         .setMessage("¿Estás seguro que deseas cancelarlo?")
-
-                        // Specifying a listener allows you to take an action before dismissing the dialog.
-                        // The dialog is automatically dismissed when a dialog button is clicked.
                         .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 listRegistros.remove(position);
@@ -90,11 +90,16 @@ public class ConsultarPedidosAdapter extends BaseAdapter {
                                 dialog.cancel();
                             }
                         })
-
-                        // A null listener allows the button to dismiss the dialog and take no further action.
                         .setNegativeButton(android.R.string.no, null)
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .show();
+            }
+        });
+        itemHolder.detallePedido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, DetallePedidoActivity.class);
+                context.startActivity(intent);
             }
         });
         return rowView;
@@ -105,6 +110,7 @@ public class ConsultarPedidosAdapter extends BaseAdapter {
         public TextView tipoCombustible;
         public TextView turno;
         public ImageButton cancelar;
+        public LinearLayout detallePedido;
     }
 
 }

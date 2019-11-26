@@ -49,7 +49,7 @@ public class GpsService implements OnMapReadyCallback {
                 TAM_ICON_PARTNER_INT,
                 false);
         BitmapDescriptor bmdIcon = BitmapDescriptorFactory.fromBitmap(bmIcon);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney").icon(bmdIcon));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Pedido #9849").icon(bmdIcon));
         mMap.setMaxZoomPreference(20);
         mMap.setMinZoomPreference(15);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));

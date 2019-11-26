@@ -12,7 +12,7 @@
     <color name="blanco_azulado2">#d0f3fc</color>
     <color name="blanco_azulado3">#E2F7FC</color>
     <color name="gris_1">#f5f7fb</color>
-    <color name="gris_2">#e0e4ed</color>
+    <color name="gris_2">#DDDCDC</color>
     <color name="gris_3">#b1b1b1</color>
     <color name="gris_4">#8F8D8D</color>
     <color name="gris_5">#6D6C6C</color>
@@ -39,5 +39,8 @@
     <color name="azul_marin">#00338d</color>
     <color name="azul_barra_separadora">#67c3ef</color>
     <color name="primary_enable_color">#e02b22</color>
+    <color name="azul_magna">#02a1ff</color>
+    <color name="azul_premium">#0075b8</color>
+    <color name="azul_diesel">#004c7e</color>
 
 </resources>

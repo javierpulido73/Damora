@@ -28,4 +28,12 @@
         <item>Bancomer **** 7364</item>
         <item>Método de pago</item>
     </string-array>
+    <string-array
+        name="string_array_reportes">
+        <item>Semanal</item>
+        <item>Mensual</item>
+        <item>Anual</item>
+        <item>Por combustible</item>
+        <item>Seleciona el reporte</item>
+    </string-array>
 </resources>

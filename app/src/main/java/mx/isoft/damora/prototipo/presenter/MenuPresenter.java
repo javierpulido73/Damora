@@ -2,6 +2,7 @@ package mx.isoft.damora.prototipo.presenter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -14,13 +15,18 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 
+import androidx.appcompat.app.AlertDialog;
+
 import mx.isoft.damora.prototipo.R;
 import mx.isoft.damora.prototipo.view.ConfirmarCompraActivity;
 import mx.isoft.damora.prototipo.view.ConsultarPedidoActivity;
+import mx.isoft.damora.prototipo.view.ContactoActivity;
 import mx.isoft.damora.prototipo.view.MantenimientoActivity;
+import mx.isoft.damora.prototipo.view.MetodosDePagoActivity;
 import mx.isoft.damora.prototipo.view.PrincipalActivity;
 import mx.isoft.damora.prototipo.view.RastrearPedidoActivity;
 import mx.isoft.damora.prototipo.view.RealizarPedidoActivity;
+import mx.isoft.damora.prototipo.view.ReportesActivity;
 
 /**
  * Created by Icom_JP on 2019-11-24.
@@ -57,24 +63,41 @@ public class MenuPresenter {
                                 destinoActivity= RastrearPedidoActivity.class;
                                 break;
                             case R.id.itm_reportes:
-                                destinoActivity= MantenimientoActivity.class;
+                                destinoActivity= ReportesActivity.class;
                                 break;
                             case R.id.itm_confirmar_compra:
                                 destinoActivity= ConfirmarCompraActivity.class;
                                 break;
                             case R.id.itm_pagos:
-                                destinoActivity= MantenimientoActivity.class;
+                                destinoActivity= MetodosDePagoActivity.class;
                                 break;
                             case R.id.itm_contacto:
-                                destinoActivity= MantenimientoActivity.class;
+                                destinoActivity= ContactoActivity.class;
                                 break;
                             case R.id.itm_cerrar_sesion:
-                                destinoActivity= MantenimientoActivity.class;
+                                new AlertDialog.Builder(view)
+                                        .setTitle("Cerrar sesión")
+                                        .setMessage("¿Estás seguro que deseas cerrar sesión?")
+                                        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dialog.cancel();
+                                            }
+                                        })
+                                        .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                System.exit(0);
+                                            }
+                                        })
+                                        .setNegativeButton(android.R.string.no, null)
+                                        .setIcon(android.R.drawable.ic_dialog_alert)
+                                        .show();
                                 break;
                         }
-                        Intent intent = new Intent(view, destinoActivity);
-                        view.startActivity(intent);
-                        view.finish();
+                        if(destinoActivity!=null){
+                            Intent intent = new Intent(view, destinoActivity);
+                            view.startActivity(intent);
+                            view.finish();
+                        }
                         return true;
                     }
                 });

@@ -12,11 +12,25 @@
         android:roundIcon="@drawable/ico_damora"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".view.ReportesActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".view.ContactoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.MetodosDePagoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.DetallePedidoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-        <activity android:name=".view.ConsultarPedidoActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".view.ConsultarPedidoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.MantenimientoActivity"
             android:theme="@style/AppTheme.NoActionBar" />

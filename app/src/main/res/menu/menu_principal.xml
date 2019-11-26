@@ -27,7 +27,7 @@
     <item
         android:id="@+id/itm_pagos"
         android:icon="@drawable/ic_pagos"
-        android:title="Pagos"/>
+        android:title="Métodos de pago"/>
     <item
         android:id="@+id/itm_contacto"
         android:icon="@drawable/ic_contact"

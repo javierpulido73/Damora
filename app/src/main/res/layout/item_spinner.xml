@@ -4,4 +4,5 @@
     android:textColor="@color/gris_4"
     android:gravity="left"
     android:textSize="@dimen/text_h5"
+    android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android" />
