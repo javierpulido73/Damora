@@ -54,8 +54,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="100">
-
+            android:weightSum="100"
+            android:layout_marginTop="20dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -68,11 +68,12 @@
             android:orientation="horizontal"
             android:gravity="left"
             android:layout_marginTop="@dimen/margin_h4">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Fernando Zapala "
+                android:text="  Fernando Zapala "
                 android:textSize="@dimen/text_h6" />
             <TextView
                 android:layout_width="wrap_content"
@@ -88,11 +89,12 @@
             android:orientation="horizontal"
             android:gravity="left"
             android:layout_marginTop="@dimen/margin_h5">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Josue Salvador"
+                android:text="  Josue Salvador"
                 android:textSize="@dimen/text_h6" />
             <TextView
                 android:layout_width="wrap_content"
@@ -111,8 +113,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="100">
-
+            android:weightSum="100"
+            android:layout_marginTop="10dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,11 +127,12 @@
             android:orientation="horizontal"
             android:gravity="left"
             android:layout_marginTop="@dimen/margin_h4">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Emanuel Pérez "
+                android:text="  Emanuel Pérez "
                 android:textSize="@dimen/text_h6" />
             <TextView
                 android:layout_width="wrap_content"
@@ -145,11 +148,12 @@
             android:orientation="horizontal"
             android:gravity="left"
             android:layout_marginTop="@dimen/margin_h5">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Rogelio Sánchez"
+                android:text="  Rogelio Sánchez"
                 android:textSize="@dimen/text_h6" />
             <TextView
                 android:layout_width="wrap_content"
@@ -179,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:layout_margin="@dimen/margin_h2"
-                android:background="@drawable/draw_boton_login"
+                android:background="@drawable/draw_boton_info"
                 android:text="Agregar tarjeta"
                 android:textAllCaps="false"
                 android:textSize="@dimen/text_h5"

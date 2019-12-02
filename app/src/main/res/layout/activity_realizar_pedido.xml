@@ -81,13 +81,16 @@
                         android:hint="Servidor"
                         android:textSize="@dimen/text_h5"
                         android:textColor="@color/gris_4"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_border_azul"
+                        />
                     <Spinner
                         android:id="@+id/spinner_combustible"
                         android:layout_width="match_parent"
                         android:layout_marginTop="@dimen/margin_h1"
                         android:hint="Servidor"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_border_azul"/>
 
                     <Spinner
                         android:id="@+id/spinner_cantidad"
@@ -96,6 +99,7 @@
                         android:layout_marginTop="@dimen/margin_h1"
                         android:hint="Servidor"
                         android:gravity="center"
+                        android:background="@drawable/spinner_border_azul"
                         />
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -115,7 +119,8 @@
                             android:text="Agregar"
                             android:textAllCaps="false"
                             android:textSize="@dimen/text_h5"
-                            android:textColor="@android:color/white"/>
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="@color/color_info"/>
                     </LinearLayout>
                 </LinearLayout>
             </ScrollView>

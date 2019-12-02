@@ -3,9 +3,9 @@
     <item >
         <shape>
             <solid
-                android:color="@color/gris_4" />
+                android:color="@color/color_info"/>
             <corners
-                android:radius="7dp" />
+                android:radius="7dp"/>
         </shape>
     </item>
 </selector>

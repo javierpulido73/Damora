@@ -21,6 +21,7 @@ import mx.isoft.damora.prototipo.R;
 import mx.isoft.damora.prototipo.view.ConfirmarCompraActivity;
 import mx.isoft.damora.prototipo.view.ConsultarPedidoActivity;
 import mx.isoft.damora.prototipo.view.ContactoActivity;
+import mx.isoft.damora.prototipo.view.LoginActivity;
 import mx.isoft.damora.prototipo.view.MantenimientoActivity;
 import mx.isoft.damora.prototipo.view.MetodosDePagoActivity;
 import mx.isoft.damora.prototipo.view.PrincipalActivity;
@@ -85,7 +86,9 @@ public class MenuPresenter {
                                         })
                                         .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int which) {
-                                                System.exit(0);
+                                                Intent intent=new Intent(view, LoginActivity.class);
+                                                view.startActivity(intent);
+                                                view.finish();
                                             }
                                         })
                                         .setNegativeButton(android.R.string.no, null)

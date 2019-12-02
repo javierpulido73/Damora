@@ -61,35 +61,37 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/gris_3"
+                android:background="@color/color_info"
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/padding_h2"
-                android:weightSum="100">
+                android:weightSum="100"
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/margin_h2"
                     android:layout_marginBottom="@dimen/margin_h2"
                     android:weightSum="100"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    >
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="32"
-                        android:gravity="center"
+                        android:gravity="left"
                         android:layout_alignParentStart="true"
                         android:text="Fecha"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:textSize="@dimen/text_h6" />
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="25"
-                        android:gravity="center"
+                        android:gravity="left"
 
                         android:layout_alignParentStart="true"
                         android:text="Tipo"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:textSize="@dimen/text_h6" />
                     <TextView
                         android:layout_width="0dp"
@@ -97,9 +99,9 @@
                         android:layout_weight="25"
                         android:layout_alignParentStart="true"
                         android:text="Turno"
-                        android:gravity="center"
+                        android:gravity="left"
 
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:textSize="@dimen/text_h6" />
                     <TextView
                         android:layout_width="0dp"
@@ -107,8 +109,8 @@
                         android:layout_weight="18"
                         android:layout_alignParentStart="true"
                         android:text="Acc"
-                        android:gravity="center"
-                        android:textColor="@android:color/black"
+                        android:gravity="left"
+                        android:textColor="@android:color/white"
                         android:textSize="@dimen/text_h6" />
                 </LinearLayout>
 
@@ -125,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/margin_h1"
             android:layout_marginBottom="@dimen/margin_h3"
-
+            android:background="@drawable/spinner_border_azul"
             android:hint="Servidor"
             android:layout_height="wrap_content"/>
         <LinearLayout
@@ -141,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:layout_margin="@dimen/margin_h2"
-                android:background="@drawable/draw_boton_login"
+                android:background="@drawable/draw_boton_info"
                 android:text="Confirmar compra"
                 android:textAllCaps="false"
                 android:textSize="@dimen/text_h5"

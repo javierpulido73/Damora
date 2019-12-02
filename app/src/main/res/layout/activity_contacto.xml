@@ -151,13 +151,7 @@
                 android:text="Grupo Damora"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:textSize="@dimen/text_h3" />
+                android:textSize="@dimen/text_h6"/>
         </LinearLayout>
-
-
-
-
     </LinearLayout>
-
-
 </LinearLayout>

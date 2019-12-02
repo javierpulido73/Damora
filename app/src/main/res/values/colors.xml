@@ -42,5 +42,9 @@
     <color name="azul_magna">#02a1ff</color>
     <color name="azul_premium">#0075b8</color>
     <color name="azul_diesel">#004c7e</color>
-
+    <color name="verde_magna">#28a745</color>
+    <color name="roja_premium">#fe4543</color>
+    <color name="negra_diesel">#2e2d2d</color>
+    <color name="verde_success">#28a745</color>
+    <color name="color_info">#17a2b8</color>
 </resources>
