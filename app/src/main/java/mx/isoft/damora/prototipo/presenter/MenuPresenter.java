@@ -22,7 +22,6 @@ import mx.isoft.damora.prototipo.view.ConfirmarCompraActivity;
 import mx.isoft.damora.prototipo.view.ConsultarPedidoActivity;
 import mx.isoft.damora.prototipo.view.ContactoActivity;
 import mx.isoft.damora.prototipo.view.LoginActivity;
-import mx.isoft.damora.prototipo.view.MantenimientoActivity;
 import mx.isoft.damora.prototipo.view.MetodosDePagoActivity;
 import mx.isoft.damora.prototipo.view.PrincipalActivity;
 import mx.isoft.damora.prototipo.view.RastrearPedidoActivity;

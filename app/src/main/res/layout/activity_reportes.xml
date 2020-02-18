@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/img_en_construccion" />
+                    android:src="@drawable/img_grafica_colores" />
             </LinearLayout>
 
 

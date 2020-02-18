@@ -24,15 +24,12 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/ico_damora" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="40"
             android:gravity="center"
-            android:layout_marginTop="@dimen/margin_h2"
-
             android:orientation="vertical">
-
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -42,17 +39,6 @@
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_h3"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="@dimen/margin_h2"
-
-            android:orientation="vertical">
-
-
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -72,31 +58,54 @@
                 android:textSize="@dimen/text_h5"
                 app:eyeTint="@android:color/black"
                 app:strikeThrough="true" />
-
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:layout_weight="60"
-
-            android:weightSum="100"
-            android:orientation="vertical">
-
             <Button
                 android:id="@+id/boton_login"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_margin="@dimen/margin_h2"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/draw_boton_login"
                 android:text="Iniciar sesión"
                 android:textAllCaps="false"
                 android:textSize="@dimen/text_h5"
                 android:textColor="@android:color/white"/>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Powered by"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_h7"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="www.itcomm.mx"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_h6"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Versión beta 1.0"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_h7"/>
 
         </LinearLayout>
 

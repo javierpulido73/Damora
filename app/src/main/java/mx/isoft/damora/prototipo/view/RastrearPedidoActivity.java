@@ -25,9 +25,9 @@ public class RastrearPedidoActivity extends AppCompatActivity {
         new MenuPresenter(this,(ImageButton) findViewById(R.id.boton_menu));
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        gpsService = new GpsService(this);
-        mapFragment.getMapAsync(gpsService);
+//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+//        gpsService = new GpsService(this);
+//        mapFragment.getMapAsync(gpsService);
 
     }
 
